@@ -1,0 +1,170 @@
+@import "../../index.scss";
+
+.header {
+    width: 100%;
+    padding: 64px 0 71px;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1345px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title h1 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+    }
+
+
+    .actions {
+        button{
+            border: none;
+            margin-right: 48px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            color: #CBB1A2;
+            outline: none;
+            transition: color .2s linear;
+            position: relative;
+            background-color: transparent;
+
+            &:after{
+                content: "";
+                display: block;
+                width: 24px;
+                height: 3px;
+                background: darkslateblue;
+                position: absolute;
+                z-index: 1;
+                margin-top: 13px;
+                opacity: 0;
+                transition: opacity 0.2s linear;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:hover {
+                color: darkslateblue;
+                cursor: pointer;
+
+                &:after{
+                    opacity: 1;
+                }
+            }
+            
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        .activeButton{
+            color: darkslateblue;
+
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: $maxW1650) {
+    .header {
+        padding: 79px 32px 71px;
+        
+        .container {
+            width: 100%;
+    
+            .actions{
+                button {
+                    margin-right: 35px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }  
+        }
+    }
+  }
+@media only screen and (max-width: $maxW1200) {
+    .header {
+        padding: 79px 32px 37px;
+    }
+  }
+@media only screen and (max-width: $maxW1024) {
+    .header {
+        padding: 79px 32px 37px 32px;
+    }
+  }
+@media only screen and (max-width: $maxW900) {
+    .header {
+        padding: 79px 231px 37px 32px;
+    
+        .container {
+            width: 360px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .title h1 {
+                width: 100%;
+                margin-bottom: 16px;
+            }      
+            .actions{
+                width: 100%;
+                }
+            }  
+        }
+  }
+@media only screen and (max-width: $maxW725) {
+    .header {
+        padding: 79px 0 37px 32px;
+    
+        .container {
+            width: 100%;
+
+            .title h1 {
+                font-size: 40px;
+            }      
+            .actions{
+                width: 100%;
+                button{
+                    font-size: 20px;
+                }
+                }
+            }  
+        }
+  }
+@media only screen and (max-width: $maxW480) {
+    .header {
+        padding: 79px 32px 37px 32px;
+    }
+  }
+@media only screen and (max-width: $maxW320) {
+    .header {
+    
+        .container {
+            justify-content: center;
+
+    
+        .actions {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            button{
+                margin-right: 0;
+                font-size: 20px;
+                margin-bottom: 25px;            
+            }
+        }
+    }
+    }
+  }

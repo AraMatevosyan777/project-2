@@ -1,0 +1,210 @@
+@import "../../index.scss";
+
+.main {
+    width: calc(100% - 160px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: hidden;
+
+    .content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100% - 187px);
+
+        .scrollBar .view{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .scrollBar .track-vertical{
+            right: 2px;
+            bottom: 2px;
+            top: 2px;
+            border-radius: 3px;
+            background: #F2CBBF;
+            width: 23px!important;
+        }
+        .scrollBar .thumb-vertical{
+            cursor: pointer;
+            border-radius: inherit;
+            background-color: #C4C4C4;;
+            width: 100%!important;
+        }
+    }
+    
+
+    .card{
+        width: 1345px;
+        height: 544px;
+        background-color: transparent;
+        margin-bottom: 60px;
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 42px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            color: #fff;
+            font-weight: 500;
+            font-style: normal;
+
+            .leftCol{
+                .title{
+                    font-size: 24px;
+                    line-height: 29px;
+                    margin-bottom: 14px;
+                }
+                .lessons{
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            .rightCol{
+                font-size: 24px;
+                line-height: 29px;
+            }
+
+            .rightCol, .lessons, .title {
+                text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+            }
+            
+
+        }
+
+        .playBtn{
+            position: absolute;
+            width: 84px;
+            height: 75px;
+            left: 42px;
+            bottom: 64px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            z-index: 1;
+        }
+    }
+}
+
+@media only screen and (max-width: $maxW1650) {
+    .scrollBar .view .card{
+        width: 1040px;
+        height: 400px;
+    }
+  }
+@media only screen and (max-width: $maxW1200) {
+    .scrollBar .view .card{
+        width: 900px;
+    }
+  }
+@media only screen and (max-width: $maxW1024) {
+    .main{
+        width: calc(100% - 130px);
+    }
+    .scrollBar .view .card{
+        width: 690px;
+        height: 312px;
+        padding: 21px 42px 21px 21px;
+        .leftCol{
+            .title{
+                margin-bottom: 8px;
+            }
+        }
+        .rightCol{
+            font-size: 16px;
+        }
+    }
+
+    .scrollBar .track-vertical{
+        display: none;
+    }
+
+    .main .card .playBtn{
+        position: absolute;
+        width: 58px;
+        height: 54px;
+        left: 19px;
+        bottom: 41px;
+      }
+  }
+
+@media only screen and (max-width: $maxW900) {
+    .main{
+        width: calc(100% - 100px);
+    }
+    .scrollBar .view .card{
+        width: 599px;
+        height: 274px;
+    }
+}
+@media only screen and (max-width: $maxW725) {
+    .scrollBar .view .card{
+        width: 530px;
+        height: 240px;
+    }
+}
+  
+@media only screen and (max-width: $maxW660) {
+    .scrollBar .view .card{
+        width: 480px;
+        height: 215px;
+    }
+}
+  
+@media only screen and (max-width: $maxW600) {
+    .scrollBar .view .card{
+        width: 430px;
+        height: 195px;
+    }
+}
+  
+@media only screen and (max-width: $maxW480) {
+    .scrollBar .view .card{
+        width: 350px;
+        height: 165px;
+        padding: 20px;
+        
+        .container {
+            .leftCol{
+                .title{
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                .lessons{
+                    font-size: 12px;
+                }
+            }
+            .rightCol{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .main .card .playBtn{
+        width: 40px;
+        height: 35px;
+        left: 10px;
+        bottom: 20px;
+        border-radius: 10px;
+    }
+}
+@media only screen and (max-width: $maxW320) {
+    .scrollBar .view .card{
+        width: 300px;
+        height: 135px;
+        padding: 20px;
+    }
+       
+}
+  
